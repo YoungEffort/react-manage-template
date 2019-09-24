@@ -1,0 +1,158 @@
+/*
+   全局公共样式
+   秦国胜
+   2019-08-05
+*/
+
+@charset "utf-8";
+@theme-cl-1:#1abc9c;// 主题色 深蓝色
+@theme-cl-2:#1890ff;// 主题色
+@cl-1:#302222;// 图标色
+@cl-2:#e24719;// 图标色
+@cl-3:#E1E4ED;// 图标色
+@cl-4:#F4C11B;// 图标色
+@cl-5:#1FD092;// 图标色
+
+@import './common.less';
+
+html,
+body {
+  /* 抗锯齿，使字体图标更清晰 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  // overflow-scrolling: touch;
+  color: #313131;
+}
+
+html,
+body,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+div,
+a,
+b,
+s,
+i,
+span,
+header,
+article,
+nav,
+section,
+footer,
+form,
+input,
+select,
+option,
+textarea,
+button,
+label,
+table,
+tr,
+td,
+th,
+thead,
+tbody,
+tfoot,
+canvas,
+video,
+audio,
+svg {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", "Avenir", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+img {
+  vertical-align: bottom;
+  border: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+textarea { resize: none; }
+// 背景相关
+.bg-1 {
+  background: @theme-cl-1;
+}
+// 字体颜色相关
+.cl-0 {
+  color: @theme-cl-2;
+}
+
+.cl-1 {
+  color: @theme-cl-1;
+}
+
+.cl-2 {
+  color: @cl-2;
+}
+// 布局相关
+
+// 超出宽度省略号
+.leave_out {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// 浮动
+.f-c::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.f-l {
+  float: left;
+}
+
+.f-r {
+  float: right;
+}
+
+#root {
+  height: 100%;
+
+  .ant-menu {
+    background: transparent;
+    color: #fff;
+  }
+
+  .cy-layout-sider {
+    .ant-menu-inline,
+    .ant-menu-vertical {
+      border-right: none;
+    }
+  }
+}
+
+.g-no-data{
+  margin-top: 15%;
+}
